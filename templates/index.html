@@ -1,0 +1,15 @@
+<style type="text/css">.error {color: red;} </style>
+
+<h1>Diagnostic Report</h1>
+<form action="/" method="POST" novalidate>
+  <div>
+    {{with .Errors.DiagReport }}
+    <p class="error">{{ . }}</p>
+    {{ end }}
+    <label>Paste Diagnostic Report</label>
+    <textarea name="diagreport"></textarea>
+  </div>
+  <div>
+    <input type="submit" value="Submit Diagnostic Report">
+  </div>
+</form>
